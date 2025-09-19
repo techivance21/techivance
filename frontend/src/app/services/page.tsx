@@ -5,14 +5,21 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 
+// --- Types ---
+interface Service {
+  title: string;
+  desc: string;
+  skills: string[];
+  img: string;
+}
+
 // --- Development Services Data ---
-const devServices = [
+const devServices: Service[] = [
   {
     title: "Mobile App Development",
     desc: `We build native and cross-platform apps engineered for performance, scalability,
            and future-proof functionality. From MVPs to enterprise-grade solutions, we ensure
-           apps deliver smooth user experiences and robust backend integrations. Our mobile
-           apps are optimized for security, offline-first capability, and analytics tracking.`,
+           apps deliver smooth user experiences and robust backend integrations.`,
     skills: [
       "React Native",
       "Flutter",
@@ -30,8 +37,7 @@ const devServices = [
     desc: `We build robust, scalable online stores that prioritize smooth customer journeys,
            secure payments, and high performance. From product catalogs to checkout flows,
            we design e-commerce platforms that boost sales, reduce cart abandonment, and
-           adapt to your brand’s vision. Our solutions are optimized for SEO, analytics, 
-           and future growth.`,
+           adapt to your brand’s vision.`,
     skills: [
       "Shopify",
       "Magento",
@@ -48,8 +54,7 @@ const devServices = [
     title: "UI / UX Design",
     desc: `We craft human-centered designs that fuse aesthetics with functionality. From
            wireframes to polished interfaces, we design experiences that resonate with users
-           and achieve business goals. Our approach ensures every click feels natural,
-           every flow is seamless, and your brand leaves a lasting impression.`,
+           and achieve business goals.`,
     skills: [
       "Figma",
       "Adobe XD",
@@ -66,8 +71,7 @@ const devServices = [
     title: "Web Development",
     desc: `We build fast, modern websites using the latest frameworks and technologies.
            From landing pages to enterprise platforms, our websites are designed for speed,
-           SEO, and scalability. With a focus on responsive design and cloud-native
-           architectures, we create solutions that adapt to the needs of tomorrow.`,
+           SEO, and scalability.`,
     skills: [
       "Next.js",
       "React",
@@ -83,141 +87,69 @@ const devServices = [
 ];
 
 // --- AI & ML Services Data ---
-const aiServices = [
+const aiServices: Service[] = [
   {
     title: "AI-Powered Chatbots",
     desc: `We create intelligent chatbots that transform customer interactions with
-           personalized, real-time responses. Our solutions integrate NLP, machine learning,
-           and custom workflows to reduce support costs and increase engagement across apps,
-           websites, and messaging platforms.`,
-    skills: [
-      "Dialogflow",
-      "LangChain",
-      "OpenAI GPT",
-      "Rasa",
-      "NLU",
-      "Custom APIs",
-      "Analytics Dashboards",
-    ],
+           personalized, real-time responses.`,
+    skills: ["Dialogflow", "LangChain", "OpenAI GPT", "Rasa", "NLU", "Custom APIs", "Analytics Dashboards"],
     img: "/ai1.png",
   },
   {
     title: "Generative AI Solutions",
-    desc: `We harness Generative AI to create text, visuals, and media tailored to business
-           needs. From automated content creation to AI-powered design and copywriting, we
-           unlock new creative workflows while maintaining brand consistency and efficiency.`,
-    skills: [
-      "Stable Diffusion",
-      "GPT-4",
-      "MidJourney",
-      "Hugging Face",
-      "Prompt Engineering",
-      "AI Safety & Ethics",
-    ],
+    desc: `We harness Generative AI to create text, visuals, and media tailored to business needs.`,
+    skills: ["Stable Diffusion", "GPT-4", "MidJourney", "Hugging Face", "Prompt Engineering", "AI Safety & Ethics"],
     img: "/ai2.png",
   },
   {
     title: "Machine Learning Models",
     desc: `We design and deploy machine learning models that power recommendations,
-           predictions, and data-driven decisions. Our ML expertise covers supervised,
-           unsupervised, and reinforcement learning to help you unlock hidden value in data.`,
-    skills: [
-      "TensorFlow",
-      "PyTorch",
-      "Scikit-learn",
-      "Pandas",
-      "AWS SageMaker",
-      "Data Preprocessing",
-      "Model Deployment",
-    ],
+           predictions, and data-driven decisions.`,
+    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "AWS SageMaker", "Data Preprocessing", "Model Deployment"],
     img: "/ai3.png",
   },
   {
     title: "AI Integration & Automation",
-    desc: `We integrate AI directly into existing systems to supercharge efficiency.
-           Whether it’s automating workflows, building APIs, or embedding AI models into
-           SaaS products, our solutions reduce manual effort and improve outcomes.`,
-    skills: [
-      "FastAPI",
-      "Python",
-      "MLOps",
-      "API Development",
-      "Kubernetes",
-      "CI/CD",
-      "Edge Deployment",
-    ],
+    desc: `We integrate AI directly into existing systems to supercharge efficiency.`,
+    skills: ["FastAPI", "Python", "MLOps", "API Development", "Kubernetes", "CI/CD", "Edge Deployment"],
     img: "/ai4.png",
   },
 ];
 
 // --- Digital Marketing Services Data ---
-const marketingServices = [
+const marketingServices: Service[] = [
   {
     title: "Digital Branding",
     desc: `We shape brands with storytelling, identity design, and multi-channel
-           campaigns that build recognition and trust. From logo design to
-           long-term positioning, we craft brands that stand out in a crowded
-           digital space.`,
-    skills: [
-      "Brand Strategy",
-      "Logo Design",
-      "Visual Identity",
-      "Creative Guidelines",
-      "Campaign Planning",
-    ],
+           campaigns that build recognition and trust.`,
+    skills: ["Brand Strategy", "Logo Design", "Visual Identity", "Creative Guidelines", "Campaign Planning"],
     img: "/marketing1.png",
   },
   {
     title: "Social Media Marketing",
     desc: `We grow communities and build online presence with targeted content,
-           data-driven campaigns, and social strategies that boost engagement
-           across platforms like Instagram, LinkedIn, and TikTok.`,
-    skills: [
-      "Instagram Ads",
-      "Facebook Marketing",
-      "TikTok Strategy",
-      "LinkedIn Outreach",
-      "Content Calendars",
-      "Engagement Analytics",
-    ],
+           data-driven campaigns, and social strategies.`,
+    skills: ["Instagram Ads", "Facebook Marketing", "TikTok Strategy", "LinkedIn Outreach", "Content Calendars", "Engagement Analytics"],
     img: "/marketing2.png",
   },
   {
     title: "Performance Marketing",
-    desc: `We deliver ROI-focused campaigns with precision targeting. From PPC
-           and SEO to multi-channel paid ads, we ensure every dollar spent
-           drives measurable growth, qualified leads, and higher conversions.`,
-    skills: [
-      "Google Ads",
-      "Meta Ads",
-      "SEO/SEM",
-      "Analytics",
-      "A/B Testing",
-      "Conversion Optimization",
-    ],
+    desc: `We deliver ROI-focused campaigns with precision targeting.`,
+    skills: ["Google Ads", "Meta Ads", "SEO/SEM", "Analytics", "A/B Testing", "Conversion Optimization"],
     img: "/marketing3.png",
   },
   {
     title: "Content & Creative Strategy",
-    desc: `We design compelling narratives with text, video, and visuals that
-           align with brand goals. Our creative teams craft campaigns that
-           capture attention, spark conversations, and drive action.`,
-    skills: [
-      "Copywriting",
-      "Video Production",
-      "Motion Design",
-      "Storyboarding",
-      "Campaign Strategy",
-      "Content Distribution",
-    ],
+    desc: `We design compelling narratives with text, video, and visuals that align with brand goals.`,
+    skills: ["Copywriting", "Video Production", "Motion Design", "Storyboarding", "Campaign Strategy", "Content Distribution"],
     img: "/marketing4.png",
   },
 ];
 
 export default function ServicePage() {
-  const [currentDev, setCurrentDev] = useState(0);
-  const [currentAI, setCurrentAI] = useState(0);
-  const [currentMarketing, setCurrentMarketing] = useState(0);
+  const [currentDev, setCurrentDev] = useState<number>(0);
+  const [currentAI, setCurrentAI] = useState<number>(0);
+  const [currentMarketing, setCurrentMarketing] = useState<number>(0);
 
   // Auto sliders
   useEffect(() => {
@@ -231,7 +163,7 @@ export default function ServicePage() {
     };
   }, []);
 
-  const renderServiceBlock = (data: any[], current: number, accent: string) => (
+  const renderServiceBlock = (data: Service[], current: number, accent: "pink" | "purple") => (
     <AnimatePresence mode="wait">
       <motion.div
         key={current}
@@ -245,7 +177,7 @@ export default function ServicePage() {
           <h3 className="text-3xl font-semibold text-white">{data[current].title}</h3>
           <p className="text-gray-300 text-lg leading-relaxed">{data[current].desc}</p>
           <div className="flex flex-wrap gap-3 mt-4">
-            {data[current].skills.map((skill: string, i: number) => (
+            {data[current].skills.map((skill, i) => (
               <span
                 key={i}
                 className={`px-3 py-1 text-sm rounded-full border border-${accent}-500/50 text-${accent}-300 bg-${accent}-500/10 hover:bg-${accent}-500/20 transition`}
@@ -276,56 +208,13 @@ export default function ServicePage() {
         <title>Techivance Services | Web, Mobile, AI & Digital Marketing</title>
         <meta
           name="description"
-          content="Techivance offers web development, mobile apps, AI chatbots, machine learning, e-commerce, branding, and digital marketing solutions. Future-ready services to grow your business."
+          content="Techivance offers web development, mobile apps, AI chatbots, machine learning, e-commerce, branding, and digital marketing solutions."
         />
-        <meta
-          name="keywords"
-          content="Techivance services, web development, mobile app development, AI chatbots, machine learning, e-commerce solutions, SEO agency, digital marketing Dubai"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Techivance Services — Web, Mobile, AI & Digital Marketing" />
-        <meta
-          property="og:description"
-          content="Discover Techivance services: scalable websites, apps, AI chatbots, ML models, e-commerce, and marketing campaigns designed for growth."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://techivance.com/services" />
-        <meta property="og:image" content="/logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Techivance Services — Web, Mobile, AI & Marketing" />
-        <meta
-          name="twitter:description"
-          content="Explore Techivance's AI, Web Development, Mobile App, SEO, and Digital Marketing services built for global growth."
-        />
-        <meta name="twitter:image" content="/logo.png" />
+        <meta name="keywords" content="Techivance services, web development, mobile app, AI chatbots, ML, e-commerce, SEO, digital marketing Dubai" />
         <link rel="canonical" href="https://techivance.com/services" />
-
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              name: "Techivance Services",
-              url: "https://techivance.com/services",
-              description:
-                "Web development, mobile apps, AI chatbots, ML, e-commerce, and digital marketing services offered by Techivance.",
-              about: [
-                { "@type": "Service", name: "Web Development" },
-                { "@type": "Service", name: "Mobile App Development" },
-                { "@type": "Service", name: "E-Commerce Development" },
-                { "@type": "Service", name: "UI/UX Design" },
-                { "@type": "Service", name: "AI-Powered Chatbots" },
-                { "@type": "Service", name: "Machine Learning" },
-                { "@type": "Service", name: "Digital Marketing" },
-              ],
-            }),
-          }}
-        />
       </Head>
 
-      <main className="relative bg-gradient-to-b from-black via-[#0a0a1a] to-black text-white overflow-hidden">
+      <main className="relative bg-gradient-to-b from-black via-[#0a0a1a] to-black text-white overflow-hidden mt-10">
         {/* Development Section */}
         <section
           className="relative py-24"

@@ -16,9 +16,9 @@ export default function ContactPage() {
   const [success, setSuccess] = useState(false);
 
   const contactCards = [
-    { icon: Mail, title: "Email Us", value: "hello@techivance.com", desc: "Expect reply within 24 hours" },
-    { icon: Phone, title: "Call Us", value: "+92 300 1234567", desc: "Mon–Fri, 9AM–6PM PKT" },
-    { icon: MapPin, title: "Visit Us", value: "Karachi, Pakistan", desc: "Book a meeting anytime" },
+    { icon: Mail, title: "Email Us", value: "techivance21@gmail.com", desc: "Expect reply within 24 hours" },
+    { icon: Phone, title: "Call Us", value: "+971 4 242 1375", desc: "Mon–Fri, 9AM–6PM PKT" },
+    { icon: MapPin, title: "Visit Us", value: "Office M-13, The Curve Building, Sheikh Zayed Road, Dubai, UAE", desc: "Book a meeting anytime" },
   ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -56,7 +56,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-black text-white min-h-screen px-4 sm:px-6 py-16 sm:py-20 mt-10">
+    <main className="bg-black text-white px-4 py-16 mt-30">
       {/* Hero */}
       <section className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-[var(--font-cossette-titre)] mb-4">
@@ -96,7 +96,7 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 md:p-10 shadow-2xl w-full">
+        <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 shadow-2xl w-full">
           <h2 className="text-3xl sm:text-4xl font-[var(--font-cossette-titre)] mb-4 text-center">
             Send us a <span className="text-pink-400">Message</span>
           </h2>
@@ -151,16 +151,3 @@ export default function ContactPage() {
     </main>
   );
 }
-
-// import React from 'react'
-// import ContactForm from '../Components/Contact';
-
-// const page = () => {
-//   return (
-//     <div>
-//       <ContactForm/>
-//     </div>
-//   )
-// }
-
-// export default page

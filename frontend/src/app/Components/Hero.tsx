@@ -61,7 +61,7 @@ export default function Hero() {
       </Head>
 
       <section
-        className="relative w-full flex items-center justify-center text-white pt-24 overflow-hidden mt-[-100px] xl:mt-[-120px]"
+        className="relative w-full flex items-center justify-center text-white pt-24 overflow-hidden mt-4"
         aria-labelledby="hero-heading"
       >
         {/* Background image */}
