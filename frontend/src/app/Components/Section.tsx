@@ -78,7 +78,7 @@ export default function HeroSection() {
       </Head>
 
       <section
-        className="relative w-full overflow-hidden bg-gradient-to-b from-black via-[#0a0a1a] to-black flex flex-col items-center justify-center px-6 md:px-12 mt-[-200px]"
+        className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-black via-[#0a0a1a] to-black flex flex-col items-center justify-center px-6 md:px-12"
         aria-label="Techivance Hero Section"
       >
         {/* Moving stars */}
@@ -99,7 +99,7 @@ export default function HeroSection() {
             className="text-white"
           >
             <h1
-              className="text-4xl md:text-6xl leading-tight font-[var(--font-cossette-titre)]"
+              className="text-4xl md:text-6xl font-bold leading-tight font-[var(--font-cossette-titre)]"
             >
               200+ Creative{" "}
               <span className="text-pink-400">Tech Minds</span>
@@ -107,8 +107,8 @@ export default function HeroSection() {
               Ready to Build Your Vision
             </h1>
             <p className="mt-6 text-gray-300 text-lg max-w-md font-[var(--font-inter)]">
-              We craft immersive digital experiences websites, apps, and
-              strategies engineered for tomorrow. Let’s launch something out
+              We craft immersive digital experiences—websites, apps, and
+              strategies—engineered for tomorrow. Let’s launch something out
               of this world.
             </p>
             <div className="mt-8 flex gap-4">

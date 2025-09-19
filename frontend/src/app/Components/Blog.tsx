@@ -121,11 +121,11 @@ export default function Blog() {
         />
       </Head>
 
-      <section className="relative w-full bg-black text-white overflow-hidden">
+      <section className="relative w-full py-24 bg-black text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="group inline-block mb-12">
-            <h2 className="text-4xl md:text-5xl  font-[var(--font-cossette-titre)]">
+            <h2 className="text-4xl md:text-5xl font-bold font-[var(--font-cossette-titre)]">
               What’s <span className="text-purple-400">New</span> in Blog
             </h2>
             <div className="h-[2px] w-0 bg-purple-500 transition-all duration-500 group-hover:w-full" />
@@ -154,7 +154,7 @@ export default function Blog() {
 
                 {/* Text Card */}
                 <div className="bg-black p-6">
-                  <h3 className="text-xl mb-3 font-[var(--font-cossette-titre)]">
+                  <h3 className="text-xl font-semibold mb-3 font-[var(--font-cossette-titre)]">
                     {post.title}
                   </h3>
                   <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
