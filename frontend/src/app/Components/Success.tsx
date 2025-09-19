@@ -47,10 +47,10 @@ export default function Success() {
       </Head>
 
       <section
-        className="relative w-full py-20 bg-black text-white"
+        className="relative w-full py-16 sm:py-20 bg-black text-white"
         aria-labelledby="success-heading"
       >
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Side - Overlapping Images */}
           <div className="relative flex justify-center md:justify-start">
             <motion.div
@@ -58,7 +58,7 @@ export default function Success() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative w-[340px] h-[460px] md:w-[400px] md:h-[520px] overflow-hidden shadow-lg"
+              className="relative w-full max-w-[280px] sm:max-w-[340px] h-[360px] sm:h-[460px] md:max-w-[400px] md:h-[520px] overflow-hidden shadow-lg"
             >
               <Image
                 src="/image1.png"
@@ -74,7 +74,7 @@ export default function Success() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="absolute top-12 left-24 w-[280px] h-[380px] md:w-[340px] md:h-[440px] overflow-hidden shadow-lg"
+              className="absolute top-6 left-12 sm:top-12 sm:left-24 w-[200px] sm:w-[280px] h-[280px] sm:h-[380px] md:w-[340px] md:h-[440px] overflow-hidden shadow-lg"
             >
               <Image
                 src="/image2.png"
@@ -95,11 +95,11 @@ export default function Success() {
           >
             <h2
               id="success-heading"
-              className="text-4xl md:text-5xl font-bold mb-6 text-white font-[var(--font-cossette-titre)]"
+              className="text-2xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 text-white font-[var(--font-cossette-titre)]"
             >
               Unleash Your Success
             </h2>
-            <p className="text-gray-300 mb-8 max-w-lg">
+            <p className="text-gray-300 mb-6 sm:mb-8 max-w-lg text-sm sm:text-base leading-relaxed">
               At <span className="text-pink-400 font-semibold">Techivance</span>, we transform{" "}
               <strong>bold ideas</strong> into <strong>scalable digital solutions</strong>.  
               From futuristic websites and AI-powered apps to high impact marketing campaigns, 
@@ -108,30 +108,30 @@ export default function Success() {
             </p>
 
             {/* Stats Section */}
-            <div className="grid grid-cols-2 gap-8 mb-10">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10">
               <div>
-                <h3 className="text-4xl font-extrabold text-pink-500 font-[var(--font-cossette-titre)]">
+                <h3 className="text-2xl sm:text-4xl text-pink-500 font-[var(--font-cossette-titre)]">
                   {projects}+
                 </h3>
-                <p className="text-gray-400">Projects Delivered</p>
+                <p className="text-gray-400 text-sm sm:text-base">Projects Delivered</p>
               </div>
               <div>
-                <h3 className="text-4xl font-extrabold text-purple-400 font-[var(--font-cossette-titre)]">
+                <h3 className="text-2xl sm:text-4xl text-purple-400 font-[var(--font-cossette-titre)]">
                   {webapps}+
                 </h3>
-                <p className="text-gray-400">Web Apps Built</p>
+                <p className="text-gray-400 text-sm sm:text-base">Web Apps Built</p>
               </div>
               <div>
-                <h3 className="text-4xl font-extrabold text-pink-400 font-[var(--font-cossette-titre)]">
+                <h3 className="text-2xl sm:text-4xl text-pink-400 font-[var(--font-cossette-titre)]">
                   {campaigns}+
                 </h3>
-                <p className="text-gray-400">Creative Campaigns</p>
+                <p className="text-gray-400 text-sm sm:text-base">Creative Campaigns</p>
               </div>
               <div>
-                <h3 className="text-4xl font-extrabold text-purple-500 font-[var(--font-cossette-titre)]">
+                <h3 className="text-2xl sm:text-4xl text-purple-500 font-[var(--font-cossette-titre)]">
                   {ideas}+
                 </h3>
-                <p className="text-gray-400">Ideas Ignited</p>
+                <p className="text-gray-400 text-sm sm:text-base">Ideas Ignited</p>
               </div>
             </div>
 
@@ -139,7 +139,7 @@ export default function Success() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/about"
-                className="px-6 py-3 border border-purple-500 text-purple-400 rounded-full hover:bg-purple-600/20 transition font-semibold shadow-lg font-[var(--font-cossette-titre)]"
+                className="px-4 sm:px-6 py-2 sm:py-3 border border-purple-500 text-purple-400 rounded-full hover:bg-purple-600/20 transition shadow-lg text-sm sm:text-base font-[var(--font-cossette-titre)]"
                 title="Learn more about Techivance"
               >
                 Know More

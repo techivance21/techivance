@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -10,7 +9,9 @@ export default function Hero() {
     <>
       {/* SEO Meta Tags */}
       <Head>
-        <title>Techivance | AI-Driven Web Design, Development & Digital Marketing</title>
+        <title>
+          Techivance | AI-Driven Web Design, Development & Digital Marketing
+        </title>
         <meta
           name="description"
           content="Techivance is an AI-native web studio delivering scalable Next.js websites, mobile apps, and SEO-driven digital marketing. We build future-ready digital products that transform businesses."
@@ -19,7 +20,10 @@ export default function Hero() {
           name="keywords"
           content="Techivance, AI web design, Next.js agency, React development, scalable websites, SEO optimization, chatbot development, AI integration, digital marketing"
         />
-        <meta property="og:title" content="Techivance — AI-Native Web & Brand Studio" />
+        <meta
+          property="og:title"
+          content="Techivance — AI-Native Web & Brand Studio"
+        />
         <meta
           property="og:description"
           content="Premium websites, mobile apps, and AI solutions for growth. Partner with Techivance for design, scalable development, and digital transformation."
@@ -57,7 +61,7 @@ export default function Hero() {
       </Head>
 
       <section
-        className="relative w-full min-h-screen flex items-center justify-center text-white pt-24 md:pt-32 overflow-hidden"
+        className="relative w-full flex items-center justify-center text-white pt-24 overflow-hidden mt-[-100px] xl:mt-[-120px]"
         aria-labelledby="hero-heading"
       >
         {/* Background image */}
@@ -83,41 +87,46 @@ export default function Hero() {
           >
             <h1
               id="hero-heading"
-              className="text-4xl md:text-6xl font-extrabold leading-tight font-[var(--font-cossette-titre)]"
+              className="text-4xl md:text-6xl leading-tight font-[var(--font-cossette-titre)]"
             >
-              Welcome to{" "}
-              <span className="text-purple-400">Techivance</span>
+              Welcome to <span className="text-purple-400">Techivance</span>
             </h1>
             <h2 className="sr-only">
               AI-Powered Web Design, Development & Digital Growth
             </h2>
             <p className="mt-4 text-lg text-gray-300 max-w-lg">
               At{" "}
-              <span className="text-pink-400 font-semibold">Techivance</span>, we craft{" "}
-              <strong>AI-powered designs</strong>,{" "}
+              <span className="text-pink-400 font-semibold">Techivance</span>, we
+              craft <strong>AI-powered designs</strong>,{" "}
               <strong>scalable development</strong>, and{" "}
               <strong>SEO-driven marketing</strong> strategies. Our future-ready
-              websites, apps, and digital solutions ignite growth, fuel innovation,
-              and transform businesses into industry leaders.
+              websites, apps, and digital solutions ignite growth, fuel
+              innovation, and transform businesses into industry leaders.
             </p>
 
-            <div className="mt-8 flex gap-4">
+            {/* Buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
               <motion.a
                 href="projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 rounded-full border border-pink-500 text-pink-400
-                           hover:bg-pink-600/20 font-semibold transition"
+                className="w-full sm:w-auto text-center px-4 py-2 sm:px-6 sm:py-3 
+                           rounded-full border border-pink-500 text-pink-400
+                           hover:bg-pink-600/20 font-medium sm:font-semibold text-sm sm:text-base
+                           transition"
                 aria-label="Start a project with Techivance"
               >
                 Explore Work
               </motion.a>
+
               <motion.a
                 href="contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 rounded-full border border-purple-500 text-purple-400
-                           hover:bg-purple-600/20 font-semibold transition"
+                className="w-full sm:w-auto text-center px-4 py-2 sm:px-6 sm:py-3 
+                           rounded-full border border-purple-500 text-purple-400
+                           hover:bg-purple-600/20 font-medium sm:font-semibold text-sm sm:text-base
+                           transition"
                 aria-label="Speak to a Techivance expert"
               >
                 Speak to an expert

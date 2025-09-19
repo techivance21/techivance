@@ -4,7 +4,7 @@ import { Inter_Tight, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 
 // Components
-import Navbar from "./Components/Navbar";
+import Navbar from './Components/Navbar';
 import Footer from "./Components/Footer";
 
 // Custom fonts (from public/fonts)
@@ -43,21 +43,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${interTight.variable} ${manrope.variable} ${cossetteTitre.variable} ${storyScript.variable}`}
-    >
-      <body className="min-h-screen bg-[#0B1020] text-[#F8FAFC] antialiased flex flex-col">
-        {/* Global Navbar */}
-        <Navbar />
-
-        {/* Page content (offset for fixed navbar) */}
-        <main id="main" className="flex-1 pt-24 md:pt-28 lg:pt-32">
-          {children}
-        </main>
-
-        {/* Global Footer */}
-        <Footer />
+    <html lang="en">
+      <body
+          className={`${interTight.variable} ${manrope.variable} ${cossetteTitre.variable} ${storyScript.variable}`}
+      >
+        <Navbar/>
+        {children}
+        <Footer/>
       </body>
     </html>
   );

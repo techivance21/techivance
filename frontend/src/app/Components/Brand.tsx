@@ -33,7 +33,7 @@ export default function Brand() {
       <section className="w-full bg-black py-20 overflow-hidden relative">
         {/* Centered Heading */}
         <div className="text-center mb-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-wide font-[var(--font-cossette-titre)]">
+          <h2 className="text-3xl md:text-4xl text-white tracking-wide font-[var(--font-cossette-titre)]">
             Trusted by <span className="text-purple-400">Global Innovators</span>
           </h2>
           <p className="mt-3 text-gray-400 text-sm md:text-base font-[var(--font-inter)]">
@@ -54,11 +54,11 @@ export default function Brand() {
                 className="flex-shrink-0 w-24 h-14 sm:w-28 sm:h-16 md:w-32 md:h-20 relative group"
               >
                 <Image
-                  src={logo}
+                  src="/brand10.png"
                   alt={`Techivance client brand logo ${i + 1}`}
                   fill
                   className="object-contain group-hover:scale-105 group-hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.6)] transition-transform duration-300"
-                  sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                  // sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                 />
               </div>
             ))}
@@ -68,3 +68,5 @@ export default function Brand() {
     </>
   );
 }
+
+

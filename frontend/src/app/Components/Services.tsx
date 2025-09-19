@@ -73,7 +73,7 @@ export default function Services() {
             className="text-center mb-10 group"
           >
             <h2
-              className="relative inline-block text-4xl md:text-5xl font-bold text-white font-[var(--font-cossette-titre)]"
+              className="relative inline-block text-4xl md:text-5xl text-white font-[var(--font-cossette-titre)]"
             >
               Our Core Services
               {/* Sleek animated underline */}
@@ -109,7 +109,7 @@ export default function Services() {
                 <div className="p-5">
                   <motion.h3
                     whileHover={{ y: -6 }}
-                    className="text-xl font-semibold text-white mb-2 font-[var(--font-cossette-titre)]"
+                    className="text-xl text-white mb-2 font-[var(--font-cossette-titre)]"
                   >
                     {srv.title}
                   </motion.h3>
@@ -143,7 +143,7 @@ export default function Services() {
                            transition-colors duration-300 hover:bg-pink-500/10"
               >
                 <div className="flex items-center justify-center h-87 w-full">
-                  <span className="relative inline-block font-bold text-white uppercase tracking-wide text-center font-[var(--font-cossette-titre)]">
+                  <span className="relative inline-block text-white uppercase tracking-wide text-center font-[var(--font-cossette-titre)]">
                     View All Services
                     <span className="block h-[2px] bg-purple-500 mt-2 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                   </span>

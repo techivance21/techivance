@@ -153,7 +153,7 @@ export default function Client() {
                   <p className="text-lg md:text-xl font-[var(--font-inter)] mb-6 text-gray-200 leading-relaxed">
                     {testimonials[index].text}
                   </p>
-                  <h4 className="text-xl md:text-2xl font-bold text-purple-500 font-[var(--font-cossette-titre)]">
+                  <h4 className="text-xl md:text-2xl text-purple-500 font-[var(--font-cossette-titre)]">
                     {testimonials[index].author}
                   </h4>
                   <span className="text-sm text-gray-400 italic font-[var(--font-story-script)]">

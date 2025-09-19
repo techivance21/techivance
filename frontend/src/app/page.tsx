@@ -9,6 +9,7 @@ import Client from "./Components/Client"
 import Blog from "./Components/Blog"
 import Brand from "./Components/Brand"
 import Section from "./Components/Section"
+import ContactPage from "./Components/Contact"
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
       <Blog />
       <Brand />
       <Section />
+      <ContactPage/>
     </>
   )
 }

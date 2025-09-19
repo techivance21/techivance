@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-gray-300 pt-20 pb-10 px-6 md:px-16 overflow-hidden">
+    <footer className="relative bg-black text-gray-300 pb-10 px-6 md:px-16 overflow-hidden">
       {/* Large faded background text */}
       <h1 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[90px] sm:text-[120px] md:text-[200px] font-extrabold text-white/5 tracking-widest select-none pointer-events-none">
         Techivance
@@ -155,3 +155,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

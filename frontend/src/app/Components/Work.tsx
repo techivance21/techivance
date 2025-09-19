@@ -55,7 +55,7 @@ export default function Work() {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-[var(--font-cossette-titre)]">
+            <h2 className="text-4xl md:text-5xl mb-6 font-[var(--font-cossette-titre)]">
               Make your Business the{" "}
               <span className="text-pink-400">Next Success Story</span>
             </h2>

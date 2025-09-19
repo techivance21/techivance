@@ -1,15 +1,7 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
-
 :root { color-scheme: dark; }
-
-
-/* Smooth section spacing */
-.section { @apply py-20 md:py-28; }
-
 
 /* Gradient mesh bg (subtle) */
 .bg-mesh {
