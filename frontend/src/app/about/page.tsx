@@ -126,14 +126,15 @@ export default function AboutPage() {
                 Techivance
               </span>
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Techivance is a premium{" "}
-              <strong>AI web design and development agency</strong> in Dubai,
-              specializing in building{" "}
-              <strong>Next.js websites, mobile apps, SEO-driven marketing, and AI integrations</strong>.
-              Our team combines creativity, strategy, and innovation to deliver
-              scalable solutions that transform businesses globally.
-            </p>
+<p className="text-lg text-gray-300 leading-relaxed">
+  Techivance is a premium{" "}
+  <strong>AI web design and development agency</strong> based in Canada and the USA, serving clients worldwide. 
+  We specialize in building{" "}
+  <strong>Next.js websites, mobile apps, SEO-driven marketing, and AI integrations</strong>. 
+  Our team combines creativity, strategy, and innovation to deliver 
+  scalable solutions that transform businesses globally.
+</p>
+
           </motion.div>
 
           {/* Right Image with Soft Radial Glow */}
