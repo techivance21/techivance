@@ -39,8 +39,13 @@ export const metadata: Metadata = {
     siteName: "Techivance",
     type: "website",
   },
-   icons: {
-    icon: "/favicon.ico",
+    icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" }, // fallback / old browsers
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" }, // modern PNG
+      { url: "/favicon.svg", type: "image/svg+xml" }, // vector
+    ],
+    apple: "/apple-touch-icon.png", // optional (180x180 PNG)
   },
 };
 
