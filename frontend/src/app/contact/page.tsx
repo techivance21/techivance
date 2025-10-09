@@ -17,8 +17,8 @@ export default function ContactPage() {
 
   const contactCards = [
     { icon: Mail, title: "Email Us", value: "techivance21@gmail.com", desc: "Expect reply within 24 hours" },
-    { icon: Phone, title: "Call Us", value: "+971 4 242 1375", desc: "Mon–Fri, 9AM–6PM PKT" },
-    { icon: MapPin, title: "Visit Us", value: "Office M-13, The Curve Building, Sheikh Zayed Road, Dubai, UAE", desc: "Book a meeting anytime" },
+    { icon: Phone, title: "Call Us", value: "720 235 0567", desc: "Mon–Fri, 9AM–6PM PKT" },
+    { icon: MapPin, title: "Visit Us", value: "5142 N Academy Blvd. Colorado Springs, CO 80918", desc: "Book a meeting anytime" },
   ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
