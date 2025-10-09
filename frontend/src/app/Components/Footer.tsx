@@ -57,7 +57,7 @@ export default function Footer() {
                 Contact Us
               </h3>
               <p className="text-sm">
-                Office M-13, The Curve Building, Sheikh Zayed Road, Dubai, UAE
+                5142 N Academy Blvd. Colorado Springs, CO 80918
               </p>
               <p className="mt-2 text-sm">
                 <a
@@ -67,8 +67,8 @@ export default function Footer() {
                   techivance21@gmail.com
                 </a>
               </p>
-              <p className="mt-2 text-sm">+971 4 242 1375</p>
-              <p className="mt-1 text-sm">+971 4 834 6571</p>
+              <p className="mt-2 text-sm">720 235 0567</p>
+              {/* <p className="mt-1 text-sm">+971 4 834 6571</p> */}
             </div>
 
             {/* Quick Links */}
